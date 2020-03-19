@@ -1,0 +1,26 @@
+.title{
+    height:78px;
+}
+.icon{
+    height: 78px;
+    float:left;
+}
+.main_title_text{
+    width:1136px;
+    height:78px;
+    text-align: center;
+    float:left;
+}
+.search{
+    background-color: dodgerblue;
+    height:78px;
+    width:200px;
+    float:left;
+}
+.button{
+    height:78px;
+    width:200px;
+    font-size: 20pt;
+    background-color: transparent;
+    text-align:center;
+}
