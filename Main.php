@@ -18,7 +18,18 @@
         <input class="button" type="submit" value="Login">
     </form>
 </div>
-<div class=""
-<div class=""
+<div class="selection">
+    <div class="selection_center">
+        <form class="sort1" action="selection/Major.php" method="post">
+            <input class="button_selection" type="submit" value="Major">
+        </form>
+        <form class="sort1" action="selection/Grade.php" method="post">
+            <input class="button_selection" type="submit" value="Grade">
+        </form>
+        <form class="sort1" action="selection/Course.php" method="post">
+            <input class="button_selection" type="submit" value="Course">
+        </form>
+    </div>
+</div>
 
 <?php
