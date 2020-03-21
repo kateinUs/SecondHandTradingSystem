@@ -59,3 +59,16 @@
     margin:100px auto;
     text-align:center;
 }
+
+.username_area{
+    width: 1000px;
+    height:60px;
+    margin:0px auto;
+    text-align:center;
+}
+.password_area{
+    width: 1000px;
+    height:60px;
+    margin:0 auto;
+    text-align:center;
+}

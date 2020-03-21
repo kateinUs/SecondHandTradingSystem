@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="resources/style.css">
     <title>WKU Second Hand Trading System</title>
 </head>
+<body>
 <div class="title">
     <div class="icon">
         <img src="resources/pictures/logo_cn.png" width="300">
@@ -14,7 +15,7 @@
     <form class="search" action="Search.php" method="post">
         <input class="button" type="submit" value="Search">
     </form>
-    <form class="search" action="Search.php" method="post">
+    <form class="search" action="Login.php" method="post">
         <input class="button" type="submit" value="Login">
     </form>
 </div>
@@ -24,4 +25,9 @@
         <input type="submit" value="search">
     </form>
 </div>
+</body>
+<script>
+
+</script>
+
 <?php
