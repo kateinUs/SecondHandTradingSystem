@@ -24,6 +24,7 @@ if ($result->num_rows > 0) {
             session_start();
             $_SESSION["Login_status"] = "OK";
             $count++;
+            echo "<meta http-equiv='Refresh' content='1;URL=Main.php'>";
         }
     }
     if($count==0)

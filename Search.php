@@ -20,9 +20,9 @@
     </form>
 </div>
 <div class="search_area">
-    <form action="search_submit.php" method="get">
+    <form action="search_submit.php" method="post">
         Enter the key words here:<input type="search" name="search1"/>
-        <select name="selection">
+        <select id="selection" name="selection">
             <option value="ISBN">ISBN</option>
             <option value="Title">Title</option>
             <option value="Author">Author</option>

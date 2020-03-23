@@ -1,7 +1,7 @@
 <?php
-header("Content-Type: text/html; charset=utf-8");// 编码为中文
 session_start();
-if(isset($_SESSION["Login_status"])&&["Login_status"] == "OK"){
+header("Content-Type: text/html; charset=utf-8");// 编码为中文
+if(isset($_SESSION["Login_status"])&&$_SESSION["Login_status"] == "OK"){
     $con = mysqli_connect("localhost","Second_Hand","pStjGTc347FDjfZW");
     if (!$con)
     {
@@ -11,6 +11,7 @@ if(isset($_SESSION["Login_status"])&&["Login_status"] == "OK"){
     mysqli_select_db($con, Second_Hand);
     mysqli_query($con,"set names 'utf8'");  //设置phpmyadmin数据库表编码为中文
 
+    $count=0;
     $selection=$_POST["selection"];
     $sql="SELECT $selection FROM Book_List;";
     $result=$con->query($sql);
@@ -21,19 +22,22 @@ if(isset($_SESSION["Login_status"])&&["Login_status"] == "OK"){
     }
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            if($_POST['username'] == $row["name"] && $_POST['password'] == $row["password"]){
-                echo "欢迎回来，尊敬的管理员，将在三秒后跳转到管理员管理界面.";
-                echo "<meta http-equiv='Refresh' content='3;URL=Login.html'>";
-            }
-            else{
-                echo "抱歉，您不是管理员，请联系管理员来获取相关数据!";
+            if($_POST["search1"] == $row[$selection]){
+                echo "Result found.";
+                $count++;
+//                echo "<meta http-equiv='Refresh' content='3;URL=Login.html'>";
             }
         }
+        if($count==0){
+            echo "<script language=\"JavaScript\">alert(\"No result found. Return to the search page.\");</script>";
+            echo "<meta http-equiv='Refresh' content='1;URL=Search.php'>";
+        }
     } else {
-        echo "0 结果";
+        echo "0 result";
     }
 
     mysqli_close($con);
 }
 else
     echo "<script language=\"JavaScript\">alert(\"Please login first!\");</script>";
+    echo "<meta http-equiv='Refresh' content='1;URL=Login.php'>";
