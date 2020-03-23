@@ -4,6 +4,8 @@
     <list default="true" id="2df660d1-9355-4227-a0e5-ee15de09729a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login_submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login_submit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/Main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Search.php" beforeDir="false" afterPath="$PROJECT_DIR$/Search.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search_submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/search_submit.php" afterDir="false" />
@@ -77,6 +79,8 @@
       <workItem from="1584595201366" duration="5817000" />
       <workItem from="1584670068169" duration="2843000" />
       <workItem from="1584768915996" duration="3382000" />
+      <workItem from="1584929563354" duration="1291000" />
+      <workItem from="1584940102891" duration="5185000" />
     </task>
     <servers />
   </component>

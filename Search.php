@@ -22,6 +22,16 @@
 <div class="search_area">
     <form action="search_submit.php" method="get">
         Enter the key words here:<input type="search" name="search1"/>
+        <select name="selection">
+            <option value="ISBN">ISBN</option>
+            <option value="Title">Title</option>
+            <option value="Author">Author</option>
+            <option value="Edition">Edition</option>
+            <option value="Grade">Grade</option>
+            <option value="Course">Course</option>
+            <option value="Major">Major</option>
+            <option value="Seller">Seller</option>
+        </select>
         <input type="submit" value="search">
     </form>
 </div>

@@ -19,18 +19,11 @@
         <input class="button" type="submit" value="Login">
     </form>
 </div>
-<div class="username_area">
-    <form action="search_submit.php" method="get">
-        Username:<input  name="username"/>
-        <input type="submit" value="search">
-    </form>
-</div>
-<div class="password_area">
-    <form action="search_submit.php" method="get">
-        Password:<input name="password"/>
-        <input type="submit" value="search">
-    </form>
-</div>
+<form class="login_area" action="Login_submit.php" method="post">
+    Username:<input type="text" name="username">
+    Password:<input type="text" name="password">
+    <input class="button_login" type="submit" value="Login">
+</form>
 </body>
 <script>
 

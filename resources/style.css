@@ -60,15 +60,15 @@
     text-align:center;
 }
 
-.username_area{
-    width: 1000px;
-    height:60px;
-    margin:0px auto;
-    text-align:center;
-}
-.password_area{
-    width: 1000px;
+.login_area{
+    width: 250px;
     height:60px;
     margin:0 auto;
+    text-align:center;
+}
+.button_login{
+    height:30px;
+    width:60px;
+    font-size:10pt;
     text-align:center;
 }

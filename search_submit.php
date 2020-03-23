@@ -2,16 +2,17 @@
 header("Content-Type: text/html; charset=utf-8");// 编码为中文
 session_start();
 if(isset($_SESSION["Login_status"])&&["Login_status"] == "OK"){
-    $con = mysqli_connect("localhost","XXXXXXX","XXXXXXX");
+    $con = mysqli_connect("localhost","Second_Hand","pStjGTc347FDjfZW");
     if (!$con)
     {
         die('Could not connect: ' . mysqli_error($con));
     }
 
-    mysqli_select_db($con, www_sybmxt_club);
+    mysqli_select_db($con, Second_Hand);
     mysqli_query($con,"set names 'utf8'");  //设置phpmyadmin数据库表编码为中文
 
-    $sql="SELECT name, password FROM admin_info;";
+    $selection=$_POST["selection"];
+    $sql="SELECT $selection FROM Book_List;";
     $result=$con->query($sql);
 
     if (!mysqli_query($con,$sql))   //如果链接失败

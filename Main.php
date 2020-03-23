@@ -14,7 +14,7 @@
     <form class="search" action="Search.php" method="post">
         <input class="button" type="submit" value="Search">
     </form>
-    <form class="search" action="Search.php" method="post">
+    <form class="search" action="Login.php" method="post">
         <input class="button" type="submit" value="Login">
     </form>
 </div>
