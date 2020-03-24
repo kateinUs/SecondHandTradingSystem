@@ -20,9 +20,12 @@
     </form>
 </div>
 <form class="login_area" action="Login_submit.php" method="post">
-    Username:<input type="text" name="username">
+    Email:<input type="text" name="email">
     Password:<input type="text" name="password">
     <input class="button_login" type="submit" value="Login">
+    <form action="Register_submit.php" method="post">
+        <input class="button_login" type="submit" value="Register now">
+    </form>
 </form>
 </body>
 <script>
