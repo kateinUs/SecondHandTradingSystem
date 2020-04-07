@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Login_submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login_submit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,6 +79,12 @@
       <workItem from="1584940102891" duration="5185000" />
       <workItem from="1584961889251" duration="2649000" />
       <workItem from="1585017191410" duration="1172000" />
+      <workItem from="1585375267209" duration="771000" />
+      <workItem from="1585376804188" duration="47000" />
+      <workItem from="1585376883280" duration="618000" />
+      <workItem from="1585394118020" duration="620000" />
+      <workItem from="1586089734054" duration="886000" />
+      <workItem from="1586236396295" duration="1307000" />
     </task>
     <servers />
   </component>

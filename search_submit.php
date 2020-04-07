@@ -1,6 +1,6 @@
 <?php
 session_start();
-header("Content-Type: text/html; charset=utf-8");// 编码为中文
+header("Content-Type: text/html; charset=utf-8");
 if(isset($_SESSION["Login_status"])&&$_SESSION["Login_status"] == "OK"){
     $con = mysqli_connect("localhost","Second_Hand","pStjGTc347FDjfZW");
     if (!$con)
@@ -9,7 +9,7 @@ if(isset($_SESSION["Login_status"])&&$_SESSION["Login_status"] == "OK"){
     }
 
     mysqli_select_db($con, Second_Hand);
-    mysqli_query($con,"set names 'utf8'");  //设置phpmyadmin数据库表编码为中文
+    mysqli_query($con,"set names 'utf8'");
 
     $count=0;
     $selection=$_POST["selection"];

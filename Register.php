@@ -19,25 +19,16 @@
         <input class="button" type="submit" value="Login">
     </form>
 </div>
-<form class="login_area" method="post" id="users_login">
+<form class="login_area" action="Register_submit.php" method="post">
     Email:<input type="text" name="email">
     Password:<input type="text" name="password">
-    <input class="button_login" type="submit" value="Login" onclick="user_login()">
-    <input class="button_login" type="submit" value="Admin login" onclick="admin_login()">
-    <button onclick="window.location.href = 'Register.php'" value="Register now">
+    <form action="Register_submit.php" method="post">
+        <input class="button_login" type="submit" value="Register now">
+    </form>
 </form>
 </body>
 <script>
-    function user_login() {
-        var form = document.forms['users_login'];
-        form.action = 'Login_submit.php';
-        form.submit();
-    }
-    function admin_login() {
-        var form = document.forms['users_login'];
-        form.action = 'admin_login.php';
-        form.submit();
-    }
+
 </script>
 
 <?php

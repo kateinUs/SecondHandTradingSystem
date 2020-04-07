@@ -7,12 +7,12 @@ if (!$con)
 }
 
 mysqli_select_db($con, Second_Hand);
-mysqli_query($con,"set names 'utf8'");
+mysqli_query($con,"set names 'utf8'");  //设置phpmyadmin数据库表编码为中文
 
-$sql="SELECT email, password FROM Users_list;";
+$sql="SELECT email, password FROM Admin_Login;";
 $result=$con->query($sql);
 $count=0;
-if (!mysqli_query($con,$sql))
+if (!mysqli_query($con,$sql))   //如果链接失败
 {
     die('Error: ' . mysqli_error($con));
 }
@@ -20,7 +20,7 @@ if (!mysqli_query($con,$sql))
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         if($_POST['email'] == $row["email"] && $_POST['password'] == $row["password"]){
-            echo "Welcome back.";
+            echo "Welcome back, Administer.";
             session_start();
             $_SESSION["Login_status"] = "OK";
             $count++;
