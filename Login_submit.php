@@ -1,5 +1,5 @@
 <?php
-header("Content-Type: text/html; charset=utf-8");// 编码为中文
+header("Content-Type: text/html; charset=utf-8");
 $con = mysqli_connect("localhost","Second_Hand","pStjGTc347FDjfZW");
 if (!$con)
 {
@@ -12,10 +12,6 @@ mysqli_query($con,"set names 'utf8'");
 $sql="SELECT email, password FROM Users_list;";
 $result=$con->query($sql);
 $count=0;
-if (!mysqli_query($con,$sql))
-{
-    die('Error: ' . mysqli_error($con));
-}
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {

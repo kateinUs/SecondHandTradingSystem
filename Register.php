@@ -21,14 +21,22 @@
 </div>
 <form class="login_area" action="Register_submit.php" method="post">
     Email:<input type="text" name="email">
-    Password:<input type="text" name="password">
+    Password:<input type="text" name="password" id="password">
+    Confirm Password:<input type="text" name="confirm_password" id="confirm_password">
     <form action="Register_submit.php" method="post">
-        <input class="button_login" type="submit" value="Register now">
+        <input class="button_login" type="submit" value="Register now" onclick="return check_password()">
     </form>
 </form>
 </body>
 <script>
-
+function check_password(){
+    var password = document.getElementById("password").value;
+    var confirm_password = document.getElementById("confirm_password").value;
+    if(password !== confirm_password){
+        alert("password not match, please check again!");
+        return false;
+    }
+}
 </script>
 
 <?php

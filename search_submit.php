@@ -16,21 +16,16 @@ if(isset($_SESSION["Login_status"])&&$_SESSION["Login_status"] == "OK"){
     $sql="SELECT $selection FROM Book_List;";
     $result=$con->query($sql);
 
-    if (!mysqli_query($con,$sql))   //如果链接失败
-    {
-        die('Error: ' . mysqli_error($con));
-    }
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             if($_POST["search1"] == $row[$selection]){
                 echo "Result found.";
                 $count++;
-//                echo "<meta http-equiv='Refresh' content='3;URL=Login.html'>";
             }
         }
         if($count==0){
             echo "<script language=\"JavaScript\">alert(\"No result found. Return to the search page.\");</script>";
-            echo "<meta http-equiv='Refresh' content='1;URL=Search.php'>";
+            echo "<script>history.go(-1)</script>";
         }
     } else {
         echo "0 result";

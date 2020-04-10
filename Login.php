@@ -24,7 +24,7 @@
     Password:<input type="text" name="password">
     <input class="button_login" type="submit" value="Login" onclick="user_login()">
     <input class="button_login" type="submit" value="Admin login" onclick="admin_login()">
-    <button onclick="window.location.href = 'Register.php'" value="Register now">
+    <button class="button_login" type="button" onclick="window.location.href = 'Register.php'">Register</button>
 </form>
 </body>
 <script>
