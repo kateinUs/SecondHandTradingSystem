@@ -9,7 +9,7 @@
     <div class="icon">
         <img src="resources/pictures/logo_cn.png" width="300">
     </div>
-    <div class="main_title_text">
+    <div class="main_title_text" onclick="jump_to_main()">
         <font style="line-height: 78px" size="10" color="black">WKU Second Hand Trading System</font>
     </div>
     <form class="search" action="Search.php" method="post">
@@ -37,12 +37,15 @@
 </div>
 </body>
 <script>
-    function check_content(){
+check_content = function(){
         var content = document.getElementById("search1").value;
         if(content === ""){
             alert("Please enter the content to search");
             return false;
         }
+    }
+    function jump_to_main(){
+        window.location.href='main.php';
     }
 </script>
 

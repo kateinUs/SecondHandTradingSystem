@@ -1,6 +1,6 @@
 <?php
 header("Content-Type: text/html; charset=utf-8");// 编码为中文
-$con = mysqli_connect("localhost","Second_Hand","pStjGTc347FDjfZW");
+$con = mysqli_connect("localhost","root","123456");
 if (!$con)
 {
     die('Could not connect: ' . mysqli_error($con));

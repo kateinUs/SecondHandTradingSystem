@@ -19,7 +19,47 @@ if(isset($_SESSION["Login_status"])&&$_SESSION["Login_status"] == "OK"){
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             if($_POST["search1"] == $row[$selection]){
-                echo "Result found.";
+                echo "<script language=\"JavaScript\">alert(\"Result Found.\");</script>";
+                echo "<table style='border: solid 1px black;'>";
+                echo "<tr><th>Seller</th><th>ISBN</th><th>Title</th><th>Author</th><th>Edition</th><th>Grade</th><th>Course</th><th>Major</th><th>On_Sell</th></tr>";
+
+                class TableRows extends RecursiveIteratorIterator {
+                    function __construct($it) {
+                        parent::__construct($it, self::LEAVES_ONLY);
+                    }
+
+                    function current() {
+                        return "<td style='width:150px;border:1px solid black;'>" . parent::current(). "</td>";
+                    }
+
+                    function beginChildren() {
+                        echo "<tr>";
+                    }
+
+                    function endChildren() {
+                        echo "</tr>" . "\n";
+                    }
+                }
+                $servername = "localhost";
+                $username = "Second_Hand";
+                $password = "pStjGTc347FDjfZW";
+                $dbname = "Second_Hand";
+                try {
+                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    $stmt = $conn->prepare("SELECT Seller, ISBN, Title, Author, Edition, Grade, Course, Major, On_Sell FROM Book_List");
+                    $stmt->execute();
+
+                    $result1 = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                    foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                        echo $v;
+                    }
+                }
+                catch(PDOException $e) {
+                    echo "Error: " . $e->getMessage();
+                }
+                $conn = null;
+                echo "</table>";
                 $count++;
             }
         }
@@ -33,6 +73,7 @@ if(isset($_SESSION["Login_status"])&&$_SESSION["Login_status"] == "OK"){
 
     mysqli_close($con);
 }
-else
+else{
     echo "<script language=\"JavaScript\">alert(\"Please login first!\");</script>";
     echo "<meta http-equiv='Refresh' content='1;URL=Login.php'>";
+}

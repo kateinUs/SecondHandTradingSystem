@@ -79,3 +79,24 @@
     margin:0 auto;
     text-align:left;
 }
+.client_area{
+    width: 1000px;
+    height: 600px;
+    margin:50px auto;
+    border: 1px solid darkgray;
+}
+.photo_area{
+    width: 180px;
+    height: 230px;
+    float: right;
+    margin: 20px;
+}
+.user_text_area1{
+    width: 700px;
+    height: 230px;
+    text-align: left;
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 20pt;
+}

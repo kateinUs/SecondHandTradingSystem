@@ -9,7 +9,7 @@
     <div class="icon">
         <img src="resources/pictures/logo_cn.png" width="300">
     </div>
-    <div class="main_title_text">
+    <div class="main_title_text" onclick="jump_to_main()">
         <font style="line-height: 78px" size="10" color="black">WKU Second Hand Trading System</font>
     </div>
     <form class="search" action="Search.php" method="post">
@@ -19,16 +19,16 @@
         <input class="button" type="submit" value="Login">
     </form>
 </div>
-<form class="login_area" method="post" id="users_login">
+<form class="login_area" method="post" name="users_login">
     Email:<input type="text" name="email" id="email">
     Password:<input type="text" name="password" id="password">
-    <input class="button_login" type="submit" value="Login" onclick="user_login()">
-    <input class="button_login" type="submit" value="Admin login" onclick="admin_login()">
+    <input class="button_login" type="button" value="Login" onclick="user_login()">
+    <input class="button_login" type="submit" value="Admin login" onclick="admin_login(this)">
     <button class="button_login" type="button" onclick="window.location.href = 'Register.php'">Register</button>
 </form>
 </body>
 <script>
-    function user_login() {
+    user_login = function() {
         var form = document.forms['users_login'];
         var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
@@ -38,7 +38,7 @@
         form.action = 'Login_submit.php';
         form.submit();
     }
-    function admin_login() {
+    admin_login = function() {
         var form = document.forms['users_login'];
         var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
@@ -47,6 +47,9 @@
         }
         form.action = 'admin_login.php';
         form.submit();
+    }
+    function jump_to_main(){
+        window.location.href='main.php';
     }
 </script>
 

@@ -9,7 +9,7 @@
     <div class="icon">
         <img src="resources/pictures/logo_cn.png" width="300">
     </div>
-    <div class="main_title_text">
+    <div class="main_title_text" onclick="jump_to_main()">
         <font style="line-height: 78px" size="10" color="black">WKU Second Hand Trading System</font>
     </div>
     <form class="search" action="Search.php" method="post">
@@ -29,13 +29,16 @@
 </form>
 </body>
 <script>
-function check_password(){
+check_password = function(){
     var password = document.getElementById("password").value;
     var confirm_password = document.getElementById("confirm_password").value;
     if(password !== confirm_password){
         alert("password not match, please check again!");
         return false;
     }
+}
+function jump_to_main(){
+    window.location.href='main.php';
 }
 </script>
 
