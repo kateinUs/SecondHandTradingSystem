@@ -1,12 +1,13 @@
 <?php
+include "db_util.php";
 header("Content-Type: text/html; charset=utf-8");
-$con = mysqli_connect("localhost","Second_Hand","pStjGTc347FDjfZW");
+//$con = mysqli_connect("localhost","zhanghui","passward");
 if (!$con)
 {
     die('Could not connect: ' . mysqli_error($con));
 }
 
-mysqli_select_db($con, Second_Hand);
+mysqli_select_db($con, $dbname);
 mysqli_query($con,"set names 'utf8'");
 
 $sql="SELECT email, password FROM Users_list;";

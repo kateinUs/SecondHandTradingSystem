@@ -1,14 +1,15 @@
 <?php
+include "db_util.php";
 session_start();
 header("Content-Type: text/html; charset=utf-8");
 if(isset($_SESSION["Login_status"])&&$_SESSION["Login_status"] == "OK"){
-    $con = mysqli_connect("localhost","Second_Hand","pStjGTc347FDjfZW");
+    $con = mysqli_connect("localhost","zhanghui","passward");
     if (!$con)
     {
         die('Could not connect: ' . mysqli_error($con));
     }
 
-    mysqli_select_db($con, Second_Hand);
+    mysqli_select_db($con, $dbname);
     mysqli_query($con,"set names 'utf8'");
 
     $count=0;
@@ -40,12 +41,9 @@ if(isset($_SESSION["Login_status"])&&$_SESSION["Login_status"] == "OK"){
                         echo "</tr>" . "\n";
                     }
                 }
-                $servername = "localhost";
-                $username = "Second_Hand";
-                $password = "pStjGTc347FDjfZW";
-                $dbname = "Second_Hand";
+
                 try {
-                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $psd);
                     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     $stmt = $conn->prepare("SELECT Seller, ISBN, Title, Author, Edition, Grade, Course, Major, On_Sell FROM Book_List");
                     $stmt->execute();

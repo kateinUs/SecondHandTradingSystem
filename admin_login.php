@@ -1,12 +1,13 @@
 <?php
 header("Content-Type: text/html; charset=utf-8");// 编码为中文
-$con = mysqli_connect("localhost","root","123456");
+//$con = mysqli_connect("localhost","zhanghui","passward");
+include "db_util.php";
 if (!$con)
 {
     die('Could not connect: ' . mysqli_error($con));
 }
 
-mysqli_select_db($con, Second_Hand);
+mysqli_select_db($con, $dbname);
 mysqli_query($con,"set names 'utf8'");  //设置phpmyadmin数据库表编码为中文
 
 $sql="SELECT email, password FROM Admin_Login;";
